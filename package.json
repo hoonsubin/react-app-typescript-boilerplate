@@ -14,7 +14,7 @@
     },
     "keywords": [],
     "author": "Hoon Kim <hoonsubin@icloud.com> (https://github.com/hoonsubin)",
-    "license": "ISC",
+    "license": "Apache License",
     "devDependencies": {
         "@babel/core": "^7.10.4",
         "@storybook/react": "^5.3.19",
