@@ -21,6 +21,10 @@ To run Storybook
 
 `$ yarn storybook`
 
+To publish to npm
+
+`$ yarn publish`
+
 ## Template Structure
 
 ```bash
@@ -64,8 +68,21 @@ To run Storybook
 This is a template repo.
 All you have todo is simply clone this and change the package settings inside the `package.json` file.
 
+### Setting up
+
 In most cases you only need to change the `name`, `description`, `keywords` and the `author`.
 But feel free to add additional scripts and anything else.
 
+### Create a component
+
 To create a React component, first you will have to remove all the `MyComponents` component and create your own `.tsx` files.
 After you have finished working on the component, unit tests and the component story, edit the export content in the `src/index.ts` as everything in there is what the end use will interact when they download your package.
+
+### Publish
+
+Before you publish anything to npm, make sure that you have an account.
+If you don't have one, you can make one from here <https://www.npmjs.com/>
+Then login to npm by using `$ npm login`.
+
+After that you can change your package configuration via `$ npm init`.
+If everything is fine, use `$ yarn publish` to publish this package to npm.
