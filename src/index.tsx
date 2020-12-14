@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './assets/styles/style.css';
+import 'fontsource-roboto';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
@@ -12,7 +13,6 @@ const render = () => {
             <React.StrictMode>
                 <App />
             </React.StrictMode>
-            ,
         </Provider>,
         document.getElementById('root'),
     );

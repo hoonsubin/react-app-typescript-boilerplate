@@ -7,7 +7,14 @@ interface Props {
 }
 
 const TodoFormInput: React.FC<Props> = ({ onClickAdd, onClickCancel }) => {
-    const [todoItem, setTodoItem] = useState<Todo>({ id: 0, title: '', body: '' });
+    const emptyFormVal = { id: 0, title: '', body: '' };
+    const [todoItem, setTodoItem] = useState<Todo>(emptyFormVal);
+
+    const handleAddButton = () => {
+        onClickAdd(todoItem);
+        // reset the form value
+        setTodoItem(emptyFormVal);
+    };
 
     return (
         <div>
@@ -21,7 +28,7 @@ const TodoFormInput: React.FC<Props> = ({ onClickAdd, onClickCancel }) => {
                 value={todoItem.body}
                 onChange={(e) => setTodoItem({ ...todoItem, body: e.target.value })}
             ></input>
-            <button onClick={() => onClickAdd(todoItem)}>Add todo</button>
+            <button onClick={() => handleAddButton()}>Add todo</button>
             <button onClick={onClickCancel}>Cancel input</button>
         </div>
     );
