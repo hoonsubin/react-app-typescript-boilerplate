@@ -1,5 +1,4 @@
-import rootReducer from './redux';
-import store from '.';
+import store, { rootReducer } from '.';
 
 export interface Todo {
     id: number; // should be unique and auto-increment

@@ -1,12 +1,16 @@
 import React from 'react';
-import './App.css';
-import TodoListView from './views/TodoListView';
+import PageRoute from './routes';
+import { History } from 'history';
+import { ConnectedRouter } from 'connected-react-router';
 
-const App: React.FC = () => {
+interface Props {
+    history: History;
+}
+const App: React.FC<Props> = ({ history }) => {
     return (
-        <div className="App">
-            <TodoListView />
-        </div>
+        <ConnectedRouter history={history}>
+            <PageRoute />
+        </ConnectedRouter>
     );
 };
 

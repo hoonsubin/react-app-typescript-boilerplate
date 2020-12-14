@@ -5,18 +5,19 @@ import 'fontsource-roboto';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store from './store';
+import store, { history } from './store';
 
 const render = () => {
     ReactDOM.render(
         <Provider store={store}>
             <React.StrictMode>
-                <App />
+                <App history={history} />
             </React.StrictMode>
         </Provider>,
         document.getElementById('root'),
     );
 };
+
 render();
 
 if (process.env.NODE_ENV === 'development' && module.hot) {

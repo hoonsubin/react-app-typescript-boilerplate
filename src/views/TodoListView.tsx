@@ -4,6 +4,7 @@ import TodoList from '../components/TodoList';
 import TodoFormInput from '../components/TodoFormInput';
 import { RootState, storeActions } from '../store';
 import { useAppDispatch } from '../hooks';
+import { Link } from 'react-router-dom';
 
 const TodoListView: React.FC = () => {
     // get the global list
@@ -19,6 +20,7 @@ const TodoListView: React.FC = () => {
                 onClickCancel={() => console.log('you clicked cancel')}
             />
             <TodoList todoItems={todoListState} />
+            <Link to="/app">App page</Link>
         </div>
     );
 };
