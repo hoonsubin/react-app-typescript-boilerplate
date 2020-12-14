@@ -5,7 +5,7 @@ const todoSlice = createSlice({
     name: 'todo',
     initialState: [
         {
-            id: 1,
+            id: 0,
             title: 'hello world',
             body: 'hello world from body',
             completed: false,
@@ -13,7 +13,9 @@ const todoSlice = createSlice({
     ] as Todo[],
     reducers: {
         newItem(state, action: PayloadAction<Todo>) {
-            const { id, title, body } = action.payload;
+            const { title, body } = action.payload;
+            // increment the item id here
+            const id = state.length + 1;
             state.push({ id, title, body, completed: false });
         },
         remove(state, action: PayloadAction<Todo>) {
