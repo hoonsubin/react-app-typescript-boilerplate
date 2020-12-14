@@ -1,88 +1,46 @@
-# react-lib-boilerplate
+# Getting Started with Create React App
 
-A boilerplate for creating React component libraries.
-This was made based on <https://levelup.gitconnected.com/create-a-react-component-library-with-typescript-and-storybook-ed28fc7511f2>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Usage
+## Available Scripts
 
-To install dependencies
+In the project directory, you can run:
 
-`$ yarn`
+### `yarn start`
 
-To build
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-`$ yarn build`
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-To run tests
+### `yarn test`
 
-`$ yarn tests`
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-To run Storybook
+### `yarn build`
 
-`$ yarn storybook`
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-To publish to npm
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-`$ yarn publish`
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Template Structure
+### `yarn eject`
 
-```bash
-.
-├── build
-│   ├── components
-│   │   └── MyComponent.d.ts
-│   ├── index.d.ts
-│   ├── index.es.js
-│   ├── index.es.js.map
-│   ├── index.js
-│   ├── index.js.map
-│   └── __tests__
-│       └── index.spec.d.ts
-├── .eslintrc.js
-├── package.json
-├── .prettierignore
-├── .prettierrc.js
-├── rollup.config.js
-├── src
-│   ├── components
-│   │   ├── MyComponents.stories.tsx
-│   │   ├── MyComponent.tsx
-│   │   └── __tests__
-│   │       └── MyComponent.spec.tsx
-│   └── index.ts
-├── .storybook
-│   ├── config.js
-│   └── webpack.config.js
-└── tsconfig.json
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
--   `.storybook/` folder contains the [Storybook](https://storybook.js.org/) configurations.
--   `build/` folder contains the react component ready for publishing.
-    Everything in here is what the end-user will use.
--   `src/` folder contains the react components written in TypeScript. Every components should be stored in `src/components/` as the end user will be using this library as a component, and the developer should treat that as such. This is also where you should store all of your Story files with the name `{name}.stories.tsx`.
--   `src/components/__tests__/` folder contains all the unit tests for the developed component.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## How to use this
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-This is a template repo.
-All you have todo is simply clone this and change the package settings inside the `package.json` file.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### Setting up
+## Learn More
 
-In most cases you only need to change the `name`, `description`, `keywords` and the `author`.
-But feel free to add additional scripts and anything else.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Create a component
-
-To create a React component, first you will have to remove all the `MyComponents` component and create your own `.tsx` files.
-After you have finished working on the component, unit tests and the component story, edit the export content in the `src/index.ts` as everything in there is what the end use will interact when they download your package.
-
-### Publish
-
-Before you publish anything to npm, make sure that you have an account.
-If you don't have one, you can make one from here <https://www.npmjs.com/>
-Then login to npm by using `$ npm login`.
-
-After that you can change your package configuration via `$ npm init`.
-If everything is fine, use `$ yarn publish` to publish this package to npm.
+To learn React, check out the [React documentation](https://reactjs.org/).
